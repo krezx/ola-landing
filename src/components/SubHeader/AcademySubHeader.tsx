@@ -14,7 +14,7 @@ const SubHeader = () => {
   };
 
   return (
-    <div className="w-full bg-zinc-900/80 backdrop-blur-sm mt-[144px]">
+    <div className="w-full bg-zinc-900/80 backdrop-blur-sm fixed top-[144px] z-40">
       <nav className="max-w-7xl mx-auto px-4">
         <ul className="flex space-x-8 h-12 items-center">
           <li>

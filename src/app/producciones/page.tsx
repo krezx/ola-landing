@@ -24,7 +24,7 @@ export default function ProduccionesPage() {
   return (
     <main>
       <ProductionsSubHeader />
-      <div className="max-w-7xl mx-auto px-4 py-12">
+      <div className="max-w-7xl mx-auto px-4 py-12 mt-[200px]">
         <h1 className="text-4xl font-bold text-white mb-8">Nuestras Producciones</h1>
         <p className="text-gray-300 mb-12 max-w-3xl">
           Descubre las producciones que hemos realizado, desde espectáculos de danza 

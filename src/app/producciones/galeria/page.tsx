@@ -25,7 +25,7 @@ const GalleryPage = () => {
     <>
       <Header />
       <SubHeader/>
-      <main className="container mx-auto px-4 py-8">
+      <main className="container mx-auto px-4 py-8 mt-[200px]">
         <h1 className="text-4xl font-bold mb-8">Galería de Producciones</h1>
         
         <div className={styles.galleryGrid}>

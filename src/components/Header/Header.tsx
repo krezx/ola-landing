@@ -20,11 +20,14 @@ const Header = () => {
         <div className="flex flex-col items-center py-4">
           {/* Logo */}
           <Link href="/" className="mb-4">
-            {/* Aquí debes reemplazar '/logo.png' con la ruta real de tu logo */}
-            <div className="w-40 h-20 bg-white/10 flex items-center justify-center text-white">
-              {/* Este div es temporal, reemplázalo con tu Image cuando tengas el logo */}
-              Logo Olá
-            </div>
+            <Image
+              src="/images/logo.jpg"
+              alt="Logo Olá"
+              width={300}
+              height={100}
+              className="h-[80px] w-[300px]"
+              style={{ objectFit: 'cover' }}
+            />
           </Link>
 
           {/* Navegación principal */}
