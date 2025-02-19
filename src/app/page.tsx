@@ -6,15 +6,15 @@ export default function Home() {
       <div className="max-w-7xl mx-auto px-4 py-12">
         <h1 className="text-4xl font-bold text-center mb-8">Visítanos</h1>
         
+        <p className="text-xl text-gray-300 text-center mb-8">
+          Encuéntranos en el corazón de La Serena, donde el arte y la danza cobran vida.
+        </p>
+
         <div className="grid md:grid-cols-2 gap-8 items-center">
-          <div className="space-y-6">
-            <p className="text-xl text-gray-300">
-              Encuéntranos en el corazón de La Serena, donde el arte y la danza cobran vida.
-            </p>
-            
+          <div className="space-y-6 order-2 md:order-1">
             <div className="space-y-2">
               <h2 className="text-2xl font-semibold">Olá Producciones Artísticas</h2>
-              <p className="text-gray-300">Av. Francisco de Aguirre 170</p>
+              <p className="text-gray-300">Benavente 1160</p>
               <p className="text-gray-300">La Serena, Chile</p>
             </div>
 
@@ -42,7 +42,7 @@ export default function Home() {
             </a>
           </div>
 
-          <div className="relative h-[400px] w-full rounded-lg overflow-hidden">
+          <div className="relative h-[400px] w-full rounded-lg overflow-hidden order-1 md:order-2">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3457.7793893560087!2d-71.2463657!3d-29.9120627!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9691cb5d939ad791%3A0xde2723f036e57f3e!2sOl%C3%A1%20Producciones%20Artisticas!5e0!3m2!1ses!2scl!4v1708487623682!5m2!1ses!2scl"
               width="100%"
