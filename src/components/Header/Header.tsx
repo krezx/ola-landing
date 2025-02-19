@@ -15,23 +15,25 @@ const Header = () => {
   };
 
   return (
-    <header className="fixed w-full top-0 z-50 bg-black/80 backdrop-blur-sm">
+    <header className="fixed w-full top-0 z-50 bg-black backdrop-blur-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col items-center py-4">
           {/* Logo */}
-          <Link href="/" className="mb-4">
-            <Image
-              src="/images/logo.jpg"
-              alt="Logo Olá"
-              width={300}
-              height={100}
-              className="h-[80px] w-[300px]"
-              style={{ objectFit: 'cover' }}
-            />
-          </Link>
+          <div className="relative z-50">
+            <Link href="/" className="mb-4">
+              <Image
+                src="/images/logo.jpg"
+                alt="Logo Olá"
+                width={300}
+                height={100}
+                className="h-[60px] w-[225px] sm:h-[80px] sm:w-[300px]"
+                style={{ objectFit: 'cover' }}
+              />
+            </Link>
+          </div>
 
           {/* Navegación principal */}
-          <nav className="hidden md:flex space-x-12">
+          <nav className="flex space-x-12 mt-4">
             <Link 
               href="/academia" 
               className={getLinkClassName('/academia')}
@@ -45,24 +47,6 @@ const Header = () => {
               Olá Producciones
             </Link>
           </nav>
-
-          {/* Botón de menú móvil */}
-          <button className="md:hidden absolute right-4 top-4 text-white">
-            <svg 
-              xmlns="http://www.w3.org/2000/svg" 
-              fill="none" 
-              viewBox="0 0 24 24" 
-              strokeWidth={1.5} 
-              stroke="currentColor" 
-              className="w-6 h-6"
-            >
-              <path 
-                strokeLinecap="round" 
-                strokeLinejoin="round" 
-                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" 
-              />
-            </svg>
-          </button>
         </div>
       </div>
     </header>
