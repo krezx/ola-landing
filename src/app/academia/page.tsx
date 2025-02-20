@@ -1,6 +1,5 @@
 import SubHeader from '@/components/SubHeader/AcademySubHeader';
 import CourseCard from '@/components/CourseCard/CourseCard';
-import Schedule from '@/components/Schedule/Schedule';
 
 const courses = [
   {
@@ -34,23 +33,14 @@ const courses = [
     ]
   },
   {
-    title: "Street (Reggaeton)",
-    description: "Aprende las mejores coreografías y movimientos del reggaeton.",
-    imageUrl: "/images/courses/reggaeton/main.jpg",
-    galleryImages: [
-      "/images/courses/reggaeton/gallery-1.jpg",
-      "/images/courses/reggaeton/gallery-2.jpg",
-      "/images/courses/reggaeton/gallery-3.jpg"
-    ]
-  },
-  {
     title: "Jazz Dance",
     description: "Combina técnica, ritmo y expresión en este estilo clásico moderno.",
     imageUrl: "/images/courses/jazz/main.jpg",
     galleryImages: [
       "/images/courses/jazz/gallery-1.jpg",
       "/images/courses/jazz/gallery-2.jpg",
-      "/images/courses/jazz/gallery-3.jpg"
+      "/images/courses/jazz/gallery-3.jpg",
+      "/images/courses/jazz/gallery-4.jpg"
     ]
   },
   {
@@ -110,7 +100,9 @@ const courses = [
     galleryImages: [
       "/images/courses/kids/gallery-1.jpg",
       "/images/courses/kids/gallery-2.jpg",
-      "/images/courses/kids/gallery-3.jpg"
+      "/images/courses/kids/gallery-3.jpg",
+      "/images/courses/kids/gallery-4.jpg",
+      "/images/courses/kids/gallery-5.jpg",
     ]
   },
   {
@@ -120,7 +112,9 @@ const courses = [
     galleryImages: [
       "/images/courses/chair/gallery-1.jpg",
       "/images/courses/chair/gallery-2.jpg",
-      "/images/courses/chair/gallery-3.jpg"
+      "/images/courses/chair/gallery-3.jpg",
+      "/images/courses/chair/gallery-4.jpg",
+      "/images/courses/chair/gallery-5.jpg",
     ]
   },
   {
