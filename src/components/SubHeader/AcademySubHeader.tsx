@@ -35,6 +35,14 @@ const SubHeader = () => {
           </li>
           <li>
             <Link
+              href='/academia/profesores'
+              className={getLinkClassName('/academia/profesores')}
+            >
+              Profesores
+            </Link>
+          </li>
+          <li>
+            <Link
               href="/academia/gala-ola"
               className={getLinkClassName('/academia/gala-ola')}
             >

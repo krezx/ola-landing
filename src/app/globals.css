@@ -35,3 +35,15 @@ body {
     transform: scale(1.02);
   }
 }
+
+.slick-track {
+  display: flex !important;
+}
+
+.slick-slide {
+  height: auto !important;
+}
+
+.slick-slide > div {
+  height: 100%;
+}

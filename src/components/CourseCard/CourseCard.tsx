@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import Modal from '../Modal/Modal';
@@ -22,6 +22,15 @@ const CourseCard = ({
   const [selectedImage, setSelectedImage] = useState(imageUrl);
   const [showLargeImage, setShowLargeImage] = useState(false);
   
+  useEffect(() => {
+    // Verificar si este curso debe abrirse automáticamente
+    const selectedCourse = localStorage.getItem('selectedCourse');
+    if (selectedCourse && selectedCourse.toLowerCase() === title.toLowerCase()) {
+      setIsModalOpen(true);
+      localStorage.removeItem('selectedCourse');
+    }
+  }, [title]);
+
   // Combinamos la imagen principal con las imágenes de la galería
   const allImages = [imageUrl, ...galleryImages];
 
@@ -48,7 +57,10 @@ const CourseCard = ({
       {/* Modal del curso */}
       <Modal
         isOpen={isModalOpen}
-        onClose={() => setIsModalOpen(false)}
+        onClose={() => {
+          setIsModalOpen(false);
+          setShowLargeImage(false);
+        }}
         title={title}
       >
         <div className="space-y-6">
@@ -75,7 +87,10 @@ const CourseCard = ({
             {allImages.map((img, index) => (
               <div 
                 key={index}
-                onClick={() => setSelectedImage(img)}
+                onClick={() => {
+                  setSelectedImage(img);
+                  setShowLargeImage(true);
+                }}
                 className={`relative w-24 h-24 flex-shrink-0 rounded-lg overflow-hidden cursor-pointer 
                   ${selectedImage === img ? 'ring-2 ring-cyan-400' : 'opacity-70 hover:opacity-100'}`}
               >
