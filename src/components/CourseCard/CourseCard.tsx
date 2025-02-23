@@ -130,7 +130,7 @@ const CourseCard = ({
           </div>
 
           {/* Miniaturas y controles de video */}
-          <div className="flex gap-4 overflow-x-auto pb-2 justify-center">
+          <div className="flex gap-2 md:gap-4 overflow-x-auto pb-2 justify-start md:justify-center px-2 md:px-0">
             {videos.map((video, index) => (
               <div 
                 key={index}
@@ -138,15 +138,15 @@ const CourseCard = ({
                   setShowVideo(true);
                   setSelectedVideo(index);
                 }}
-                className={`relative w-24 h-24 flex-shrink-0 rounded-lg overflow-hidden cursor-pointer 
+                className={`relative w-20 h-20 md:w-24 md:h-24 flex-shrink-0 rounded-lg overflow-hidden cursor-pointer 
                   ${showVideo && selectedVideo === index ? 'ring-2 ring-cyan-400' : 'opacity-70 hover:opacity-100'}`}
               >
-                <div className="absolute inset-0 bg-black/50 flex flex-col items-center justify-center p-2">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8 text-white">
+                <div className="absolute inset-0 bg-black/50 flex flex-col items-center justify-center p-1 md:p-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 md:w-8 md:h-8 text-white">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347c-.75.412-1.667-.13-1.667-.986V5.653Z" />
                   </svg>
                   {video.teacher && (
-                    <span className="text-white text-xs text-center mt-1">{video.teacher}</span>
+                    <span className="text-white text-[10px] md:text-xs text-center mt-1 line-clamp-2">{video.teacher}</span>
                   )}
                 </div>
               </div>
@@ -158,7 +158,7 @@ const CourseCard = ({
                   setSelectedImage(img);
                   setShowVideo(false);
                 }}
-                className={`relative w-24 h-24 flex-shrink-0 rounded-lg overflow-hidden cursor-pointer 
+                className={`relative w-20 h-20 md:w-24 md:h-24 flex-shrink-0 rounded-lg overflow-hidden cursor-pointer 
                   ${selectedImage === img && !showVideo ? 'ring-2 ring-cyan-400' : 'opacity-70 hover:opacity-100'}`}
               >
                 <Image
@@ -174,6 +174,10 @@ const CourseCard = ({
           {/* Descripción */}
           <div className="space-y-4">
             <p className="text-gray-300 text-lg">{description}</p>
+            
+            {age && (
+              <p className="text-cyan-400 font-medium">Edad: {age} </p>
+            )}
             
             {/* Nota sobre horarios */}
             <div className="bg-zinc-800/50 p-4 rounded-lg mt-6">

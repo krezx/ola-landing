@@ -65,9 +65,6 @@ const courses = [
     age: "+14 años",
     imageUrl: "/images/courses/girly/main.jpg",
     galleryImages: [
-      "/images/courses/girly/gallery-1.jpg",
-      "/images/courses/girly/gallery-2.jpg",
-      "/images/courses/girly/gallery-3.jpg"
     ],
     videoUrl: "/images/courses/girly/video.mp4",
   },
@@ -110,9 +107,6 @@ const courses = [
     age: "+6 años",
     imageUrl: "/images/courses/tiktok/main.jpg",
     galleryImages: [
-      "/images/courses/tiktok/gallery-1.jpg",
-      "/images/courses/tiktok/gallery-2.jpg",
-      "/images/courses/tiktok/gallery-3.jpg"
     ],
     videoUrl: "/images/courses/tiktok/video.mp4",
   },
@@ -161,9 +155,6 @@ const courses = [
     age: "Alumnos +13 años",
     imageUrl: "/images/courses/ballet/main.jpg",
     galleryImages: [
-      "/images/courses/ballet/gallery-1.jpg",
-      "/images/courses/ballet/gallery-2.jpg",
-      "/images/courses/ballet/gallery-3.jpg"
     ]
   },
   {
@@ -173,7 +164,8 @@ const courses = [
     imageUrl: "/images/courses/full-dance/main.jpg",
     galleryImages: [
       "/images/courses/full-dance/gallery-1.jpg",
-    ]
+    ],
+    videoUrl: "/images/courses/full-dance/video.mp4",
   },
   {
     title: "Lyrical",
@@ -181,9 +173,6 @@ const courses = [
     age: "+12 años",
     imageUrl: "/images/courses/lyrical/main.jpg",
     galleryImages: [
-      "/images/courses/lyrical/gallery-1.jpg",
-      "/images/courses/lyrical/gallery-2.jpg",
-      "/images/courses/lyrical/gallery-3.jpg"
     ]
   }
 ];
