@@ -4,7 +4,8 @@ import CourseCard from '@/components/CourseCard/CourseCard';
 const courses = [
   {
     title: "Danza espectáculo",
-    description: "Aprende las técnicas y coreografías más impactantes para el escenario.",
+    description: "Curso en el que combinamos secuencias estilizadas que capturan la esencia del pop contemporáneo, a través de la interpretación podrás desarrollar la coordinación y la técnica.",
+    age: "6 a 12 años",
     imageUrl: "/images/courses/danza-espectaculo/main.jpg",
     galleryImages: [
       "/images/courses/danza-espectaculo/gallery-1.jpg",
@@ -15,16 +16,16 @@ const courses = [
   {
     title: "Moderno / Contemporáneo",
     description: "Explora la libertad de movimiento y la expresión corporal contemporánea.",
+    age: "+12 años",
     imageUrl: "/images/courses/contemporaneo/main.jpg",
     galleryImages: [
       "/images/courses/contemporaneo/gallery-1.jpg",
-      "/images/courses/contemporaneo/gallery-2.jpg",
-      "/images/courses/contemporaneo/gallery-3.jpg"
     ]
   },
   {
     title: "Street",
-    description: "Domina los movimientos urbanos y las últimas tendencias del street dance.",
+    description: "Sub-estilo del jazz dance donde mezclamos la técnica, estilos y danzas urbanas, poniendo énfasis en los estilos musicales como el reggaeton.",
+    age: "+13 años",
     imageUrl: "/images/courses/street/main.jpg",
     galleryImages: [
       "/images/courses/street/gallery-1.jpg",
@@ -34,7 +35,8 @@ const courses = [
   },
   {
     title: "Jazz Dance",
-    description: "Combina técnica, ritmo y expresión en este estilo clásico moderno.",
+    description: "Curso donde se trabaja la técnica, se desarrolla la interpretación y coordinación.",
+    age: "Juvenil/Adulto",
     imageUrl: "/images/courses/jazz/main.jpg",
     galleryImages: [
       "/images/courses/jazz/gallery-1.jpg",
@@ -45,17 +47,18 @@ const courses = [
   },
   {
     title: "Sexy Style Heels",
-    description: "Desarrolla confianza y estilo bailando con tacones.",
+    description: "Curso enfocado a trabajar la técnica de baile en tacones, en las cuales también se trabaja coreografía, postura, equilibrio, musicalidad y sobre todo la sensualidad.",
+    age: "+14 años",
     imageUrl: "/images/courses/heels/main.jpg",
     galleryImages: [
       "/images/courses/heels/gallery-1.jpg",
-      "/images/courses/heels/gallery-2.jpg",
-      "/images/courses/heels/gallery-3.jpg"
+      "/images/courses/heels/gallery-2.jpg"
     ]
   },
   {
     title: "Girly",
-    description: "Estilo femenino que combina diversos géneros de baile.",
+    description: "Curso enfocado a potenciar tu femineidad, actitud e interpretación, a través de distintos ritmos musicales.",
+    age: "+14 años",
     imageUrl: "/images/courses/girly/main.jpg",
     galleryImages: [
       "/images/courses/girly/gallery-1.jpg",
@@ -65,26 +68,28 @@ const courses = [
   },
   {
     title: "Ballroom",
-    description: "Aprende los bailes de salón más populares y elegantes.",
+    description: "Curso técnico/coreográfico donde se exploran ritmos latinos del ballroom, trabajando musicalidad, ritmo y memoria coreográfica.",
+    age: "Juvenil/Adulto",
     imageUrl: "/images/courses/ballroom/main.jpg",
     galleryImages: [
       "/images/courses/ballroom/gallery-1.jpg",
-      "/images/courses/ballroom/gallery-2.jpg",
-      "/images/courses/ballroom/gallery-3.jpg"
+      "/images/courses/ballroom/gallery-2.jpg"
     ]
   },
   {
     title: "Iniciación a la danza",
-    description: "Curso perfecto para comenzar en el mundo de la danza.",
+    description: "Curso donde se comienza a aprender los pasos básicos del ballet a través de la danza y el juego, desarrollando la coordinación.",
+    age: "4 a 6 años",
     imageUrl: "/images/courses/iniciacion/main.jpg",
     galleryImages: [
-      "/images/courses/iniciacion/gallery-2.jpg",
-      "/images/courses/iniciacion/gallery-3.jpg"
+      "/images/courses/iniciacion/gallery-1.jpg",
+      "/images/courses/iniciacion/gallery-2.jpg"
     ]
   },
   {
     title: "TikTok Dance",
-    description: "Aprende las coreografías más virales de las redes sociales.",
+    description: "Curso donde aprenderás distintos bailes, trabajando el ritmo y la memoria coreográfica. Esta clase finaliza con un registro grabado con toda la actitud y estilo que trae esta nueva moda.",
+    age: "+6 años",
     imageUrl: "/images/courses/tiktok/main.jpg",
     galleryImages: [
       "/images/courses/tiktok/gallery-1.jpg",
@@ -94,19 +99,21 @@ const courses = [
   },
   {
     title: "Dance Kids",
-    description: "Clases especialmente diseñadas para los más pequeños.",
+    description: "Este curso es un espacio de diversión y aprendizaje para los más pequeños donde explorarán este mundo de la danza.",
+    age: "6 a 12 años",
     imageUrl: "/images/courses/kids/main.jpg",
     galleryImages: [
       "/images/courses/kids/gallery-1.jpg",
       "/images/courses/kids/gallery-2.jpg",
       "/images/courses/kids/gallery-3.jpg",
       "/images/courses/kids/gallery-4.jpg",
-      "/images/courses/kids/gallery-5.jpg",
+      "/images/courses/kids/gallery-5.jpg"
     ]
   },
   {
     title: "Chair Dance",
-    description: "Coreografías innovadoras utilizando la silla como elemento.",
+    description: "Curso donde se trabaja la sensualidad, autoconfianza y actitud junto a nuestro implemento la silla, donde descubrirás nuevos movimientos y desarrollarás trucos.",
+    age: "Juvenil/Adulto",
     imageUrl: "/images/courses/chair/main.jpg",
     galleryImages: [
       "/images/courses/chair/gallery-1.jpg",
@@ -114,21 +121,22 @@ const courses = [
       "/images/courses/chair/gallery-3.jpg",
       "/images/courses/chair/gallery-4.jpg",
       "/images/courses/chair/gallery-5.jpg",
+      "/images/courses/chair/gallery-6.jpg",
     ]
   },
   {
     title: "Broadway Show",
-    description: "Aprende el estilo de los musicales de Broadway.",
+    description: "Curso donde se mezclan los estilos como el jazz dance y el burlesque, desarrollando la sensualidad y la actitud.",
+    age: "Juvenil/Adulto",
     imageUrl: "/images/courses/broadway/main.jpg",
     galleryImages: [
       "/images/courses/broadway/gallery-1.jpg",
-      "/images/courses/broadway/gallery-2.jpg",
-      "/images/courses/broadway/gallery-3.jpg"
     ]
   },
   {
     title: "Ballet",
     description: "Técnica clásica fundamental para cualquier bailarín.",
+    age: "Alumnos +13 años",
     imageUrl: "/images/courses/ballet/main.jpg",
     galleryImages: [
       "/images/courses/ballet/gallery-1.jpg",
@@ -138,17 +146,17 @@ const courses = [
   },
   {
     title: "Full Dance",
-    description: "Programa completo que combina diferentes estilos de baile.",
+    description: "Curso enfocado en poder desarrollar la motricidad y coordinación de forma entretenida, además de poder jugar con la creatividad e imaginación.",
+    age: "4 a 7 años",
     imageUrl: "/images/courses/full-dance/main.jpg",
     galleryImages: [
       "/images/courses/full-dance/gallery-1.jpg",
-      "/images/courses/full-dance/gallery-2.jpg",
-      "/images/courses/full-dance/gallery-3.jpg"
     ]
   },
   {
     title: "Lyrical",
     description: "Fusión de ballet y jazz con énfasis en la expresión emocional.",
+    age: "+12 años",
     imageUrl: "/images/courses/lyrical/main.jpg",
     galleryImages: [
       "/images/courses/lyrical/gallery-1.jpg",
@@ -169,6 +177,7 @@ export default function AcademiaPage() {
               key={index}
               title={course.title}
               description={course.description}
+              age={course.age}
               imageUrl={course.imageUrl}
               galleryImages={course.galleryImages}
             />

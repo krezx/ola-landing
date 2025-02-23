@@ -8,6 +8,7 @@ import Modal from '../Modal/Modal';
 interface CourseCardProps {
   title: string;
   description: string;
+  age?: string;
   imageUrl: string;
   galleryImages?: string[];
 }
@@ -15,6 +16,7 @@ interface CourseCardProps {
 const CourseCard = ({ 
   title, 
   description, 
+  age,
   imageUrl,
   galleryImages = []
 }: CourseCardProps) => {
@@ -51,6 +53,13 @@ const CourseCard = ({
         <div className="p-4">
           <h3 className="text-xl font-semibold text-white mb-2">{title}</h3>
           <p className="text-gray-300 text-sm">{description}</p>
+          <p className="text-gray-300 text-sm">
+            {age && (
+              <span className="text-cyan-400 font-medium">
+                Edad: {age}
+              </span>
+            )}
+          </p>
         </div>
       </div>
 
