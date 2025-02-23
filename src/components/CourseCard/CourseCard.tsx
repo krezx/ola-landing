@@ -11,6 +11,7 @@ interface CourseCardProps {
   age?: string;
   imageUrl: string;
   galleryImages?: string[];
+  videoUrl?: string;
 }
 
 const CourseCard = ({ 
@@ -18,11 +19,13 @@ const CourseCard = ({
   description, 
   age,
   imageUrl,
-  galleryImages = []
+  galleryImages = [],
+  videoUrl
 }: CourseCardProps) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState(imageUrl);
   const [showLargeImage, setShowLargeImage] = useState(false);
+  const [showVideo, setShowVideo] = useState(true);
   
   useEffect(() => {
     // Verificar si este curso debe abrirse automáticamente
@@ -69,36 +72,68 @@ const CourseCard = ({
         onClose={() => {
           setIsModalOpen(false);
           setShowLargeImage(false);
+          setShowVideo(true);
         }}
         title={title}
       >
         <div className="space-y-6">
-          {/* Imagen principal */}
-          <div 
-            className="relative h-[400px] w-full cursor-pointer"
-            onClick={() => setShowLargeImage(true)}
-          >
-            <Image
-              src={selectedImage}
-              alt={title}
-              fill
-              className="object-cover rounded-lg"
-            />
-            <div className="absolute inset-0 bg-black/20 hover:bg-black/30 transition-colors flex items-center justify-center opacity-0 hover:opacity-100">
-              <span className="text-white bg-black/50 px-4 py-2 rounded-lg">
-                Click para ampliar
-              </span>
-            </div>
+          {/* Contenedor de Video/Imagen principal */}
+          <div className="relative h-[400px] w-full">
+            {videoUrl && showVideo ? (
+              <div className="relative h-full w-full flex items-center justify-center bg-black">
+                <video
+                  src={videoUrl}
+                  className="max-h-full max-w-full h-auto w-auto"
+                  autoPlay
+                  controls
+                  muted={false}
+                  playsInline
+                />
+              </div>
+            ) : (
+              <div 
+                className="relative h-full w-full cursor-pointer"
+                onClick={() => setShowLargeImage(true)}
+              >
+                <Image
+                  src={selectedImage}
+                  alt={title}
+                  fill
+                  className="object-cover rounded-lg"
+                />
+                <div className="absolute inset-0 bg-black/20 hover:bg-black/30 transition-colors flex items-center justify-center opacity-0 hover:opacity-100">
+                  <span className="text-white bg-black/50 px-4 py-2 rounded-lg">
+                    Click para ampliar
+                  </span>
+                </div>
+              </div>
+            )}
           </div>
 
-          {/* Miniaturas de la galería */}
+          {/* Miniaturas de la galería y control de video */}
           <div className="flex gap-4 overflow-x-auto pb-2 justify-center">
+            {videoUrl && (
+              <div 
+                onClick={() => setShowVideo(true)}
+                className={`relative w-24 h-24 flex-shrink-0 rounded-lg overflow-hidden cursor-pointer 
+                  ${showVideo ? 'ring-2 ring-cyan-400' : 'opacity-70 hover:opacity-100'}`}
+              >
+                <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8 text-white">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347c-.75.412-1.667-.13-1.667-.986V5.653Z" />
+                  </svg>
+                </div>
+              </div>
+            )}
             {allImages.map((img, index) => (
               <div 
                 key={index}
-                onClick={() => setSelectedImage(img)}
+                onClick={() => {
+                  setSelectedImage(img);
+                  setShowVideo(false);
+                }}
                 className={`relative w-24 h-24 flex-shrink-0 rounded-lg overflow-hidden cursor-pointer 
-                  ${selectedImage === img ? 'ring-2 ring-cyan-400' : 'opacity-70 hover:opacity-100'}`}
+                  ${selectedImage === img && !showVideo ? 'ring-2 ring-cyan-400' : 'opacity-70 hover:opacity-100'}`}
               >
                 <Image
                   src={img}

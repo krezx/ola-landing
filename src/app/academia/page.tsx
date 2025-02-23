@@ -11,7 +11,8 @@ const courses = [
       "/images/courses/danza-espectaculo/gallery-1.jpg",
       "/images/courses/danza-espectaculo/gallery-2.jpg",
       "/images/courses/danza-espectaculo/gallery-3.jpg"
-    ]
+    ],
+    videoUrl: "/images/courses/danza-espectaculo/video.mp4",
   },
   {
     title: "Moderno / Contemporáneo",
@@ -31,7 +32,8 @@ const courses = [
       "/images/courses/street/gallery-1.jpg",
       "/images/courses/street/gallery-2.jpg",
       "/images/courses/street/gallery-3.jpg"
-    ]
+    ],
+    videoUrl: "/images/courses/street/video.mp4",
   },
   {
     title: "Jazz Dance",
@@ -43,7 +45,8 @@ const courses = [
       "/images/courses/jazz/gallery-2.jpg",
       "/images/courses/jazz/gallery-3.jpg",
       "/images/courses/jazz/gallery-4.jpg"
-    ]
+    ],
+    videoUrl: "/images/courses/jazz/video.mp4",
   },
   {
     title: "Sexy Style Heels",
@@ -53,7 +56,8 @@ const courses = [
     galleryImages: [
       "/images/courses/heels/gallery-1.jpg",
       "/images/courses/heels/gallery-2.jpg"
-    ]
+    ],
+    videoUrl: "/images/courses/heels/video.mp4",
   },
   {
     title: "Girly",
@@ -64,7 +68,8 @@ const courses = [
       "/images/courses/girly/gallery-1.jpg",
       "/images/courses/girly/gallery-2.jpg",
       "/images/courses/girly/gallery-3.jpg"
-    ]
+    ],
+    videoUrl: "/images/courses/girly/video.mp4",
   },
   {
     title: "Ballroom",
@@ -74,7 +79,8 @@ const courses = [
     galleryImages: [
       "/images/courses/ballroom/gallery-1.jpg",
       "/images/courses/ballroom/gallery-2.jpg"
-    ]
+    ],
+    videoUrl: "/images/courses/ballroom/video.mp4",
   },
   {
     title: "Iniciación a la danza",
@@ -84,7 +90,8 @@ const courses = [
     galleryImages: [
       "/images/courses/iniciacion/gallery-1.jpg",
       "/images/courses/iniciacion/gallery-2.jpg"
-    ]
+    ],
+    videoUrl: "/images/courses/iniciacion/video1.mp4",
   },
   {
     title: "TikTok Dance",
@@ -95,7 +102,8 @@ const courses = [
       "/images/courses/tiktok/gallery-1.jpg",
       "/images/courses/tiktok/gallery-2.jpg",
       "/images/courses/tiktok/gallery-3.jpg"
-    ]
+    ],
+    videoUrl: "/images/courses/tiktok/video.mp4",
   },
   {
     title: "Dance Kids",
@@ -108,7 +116,8 @@ const courses = [
       "/images/courses/kids/gallery-3.jpg",
       "/images/courses/kids/gallery-4.jpg",
       "/images/courses/kids/gallery-5.jpg"
-    ]
+    ],
+    videoUrl: "/images/courses/kids/video.mp4",
   },
   {
     title: "Chair Dance",
@@ -122,7 +131,8 @@ const courses = [
       "/images/courses/chair/gallery-4.jpg",
       "/images/courses/chair/gallery-5.jpg",
       "/images/courses/chair/gallery-6.jpg",
-    ]
+    ],
+    videoUrl: "/images/courses/chair/video.mp4",
   },
   {
     title: "Broadway Show",
@@ -131,7 +141,8 @@ const courses = [
     imageUrl: "/images/courses/broadway/main.jpg",
     galleryImages: [
       "/images/courses/broadway/gallery-1.jpg",
-    ]
+    ],
+    videoUrl: "/images/courses/broadway/video.mp4",
   },
   {
     title: "Ballet",
@@ -180,6 +191,7 @@ export default function AcademiaPage() {
               age={course.age}
               imageUrl={course.imageUrl}
               galleryImages={course.galleryImages}
+              videoUrl={course.videoUrl}
             />
           ))}
         </div>
