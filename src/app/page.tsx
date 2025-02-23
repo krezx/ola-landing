@@ -3,12 +3,12 @@ import Image from "next/image";
 export default function Home() {
   return (
     <main className="min-h-screen pt-[144px]">
-      <div className="relative h-[500px] w-full mb-12">
+      <div className="relative w-full mb-12 h-auto aspect-[16/9] md:h-[500px]">
         <Image
           src="/images/inicio.jpg"
           alt="Imagen de inicio"
           fill
-          className="object-cover rounded-lg"
+          className="object-contain md:object-cover rounded-lg"
           priority
           quality={100}
           sizes="(max-width: 1280px) 100vw, 1280px"
