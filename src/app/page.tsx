@@ -3,6 +3,17 @@ import Image from "next/image";
 export default function Home() {
   return (
     <main className="min-h-screen pt-[144px]">
+      <div className="relative h-[500px] w-full mb-12">
+        <Image
+          src="/images/inicio.jpg"
+          alt="Imagen de inicio"
+          fill
+          className="object-cover rounded-lg"
+          priority
+          quality={100}
+          sizes="(max-width: 1280px) 100vw, 1280px"
+        />
+      </div>
       <div className="max-w-7xl mx-auto px-4 py-12">
         <h1 className="text-4xl font-bold text-center mb-8">Visítanos</h1>
         

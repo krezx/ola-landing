@@ -260,8 +260,8 @@ const Schedule = () => {
       </div>
 
       <div className="mt-8 text-center">
-        <p className="text-lg text-[#FF99EB]">Inicio de clases: Marzo 2024</p>
-        <p className="text-sm text-gray-400 mt-2">* Los horarios pueden estar sujetos a cambios</p>
+        <p className="text-lg text-[#FF99EB]">Inicio de clases: Marzo 2025</p>
+        <p className="text-sm text-gray-400 mt-2">* Los horarios pueden estar sujetos a cambios*</p>
       </div>
     </div>
   );

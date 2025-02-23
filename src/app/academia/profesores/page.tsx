@@ -7,36 +7,37 @@ const teachers = [
     id: 1,
     name: "Andrea Barahona",
     image: "/images/teachers/andrea.jpg",
-    description: "Insertar descripción",
-    courses: ["Dance Kids", "Ballroom", "Jazz Dance"]
+    courses: ["Dance Kids", "Jazz Dance", "Danza espectáculo"]
   },
   {
     id: 2,
     name: "Antonella Alvarez",
     image: "/images/teachers/antonella.jpg",
-    description: "Insertar descripción",
-    courses: ["Street", "Chair Dance", "TikTok Dance"]
+    courses: ["Street", "Chair Dance", "TikTok Dance", "Broadway Show"]
   },
   {
     id: 3,
     name: "Francisca Cerda",
     image: "/images/teachers/francisca.jpg",
-    description: "Insertar descripción",
-    courses: ["Ballroom", "", ""]
+    courses: ["Ballroom"]
   },
   {
     id: 4,
     name: "Belen Esquivel",
     image: "/images/teachers/belen.jpg",
-    description: "Insertar descripción",
-    courses: ["Insertar cursos"]
+    courses: ["Iniciación a la danza"]
   },
   {
     id: 5,
     name: "Valeria Celume",
     image: "/images/teachers/valeria.jpg",
-    description: "Insertar descripción",
-    courses: ["Full Dance"]
+    courses: ["Full Dance", "Iniciación a la danza"]
+  },
+  {
+    id: 6,
+    name: "Catalina Pasten",
+    image: "/images/teachers/catalina.jpg",
+    courses: ["Sexy Style Heels", "Girly"]
   }
 ];
 

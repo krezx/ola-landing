@@ -15,7 +15,6 @@ interface Teacher {
   id: number;
   name: string;
   image: string;
-  description: string;
   courses: string[];
 }
 
@@ -77,7 +76,6 @@ export default function TeacherCarousel({ teachers }: TeacherCarouselProps) {
                   </div>
                   <div className="p-4 flex-1 flex flex-col justify-start">
                     <div>
-                      <p className="text-gray-300 mb-4 text-sm text-center">{teacher.description}</p>
                       <div className="text-center">
                         <h4 className="font-semibold mb-3 text-[#2FECFF]">Cursos:</h4>
                         <div className="flex flex-col items-center space-y-2">
