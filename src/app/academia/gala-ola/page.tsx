@@ -58,7 +58,7 @@ export default function GalaOlaPage() {
     return (
         <main className="min-h-screen bg-black">
             <AcademySubHeader />
-            <div className="container mx-auto px-4 py-8 sm:mt-[144px] lg:mt-[200px] mt-[170px]">
+            <div className="container mx-auto px-4 py-8 sm:mt-[144px] lg:mt-[200px] mt-[200px]">
                 <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-center mb-6 sm:mb-8 lg:mb-12">
                     Gala Olá Dance
                 </h1>

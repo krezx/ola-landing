@@ -45,7 +45,7 @@ export default function ProfesoresPage() {
   return (
     <main className="min-h-screen">
       <SubHeader />
-      <div className="container mx-auto px-4  mt-[200px]">
+      <div className="container mx-auto px-4  mt-[230px]">
         <div className="text-center">
           <p className="text-gray-300 text-lg max-w-3xl mx-auto mb-6">
             Conoce a nuestro excepcional equipo de profesores, apasionados por la danza 

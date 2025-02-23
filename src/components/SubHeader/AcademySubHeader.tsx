@@ -15,12 +15,12 @@ const SubHeader = () => {
 
   return (
     <div className="w-full bg-zinc-900/80 backdrop-blur-sm fixed top-[144px] z-40">
-      <nav className="max-w-7xl mx-auto px-4 overflow-x-auto">
-        <ul className="flex space-x-4 md:space-x-8 h-12 items-center min-w-max">
+      <nav className="max-w-7xl mx-auto px-4">
+        <ul className="flex flex-wrap gap-4 md:gap-8 h-auto min-h-[48px] items-center justify-center md:justify-start py-2">
           <li>
             <Link 
               href="/academia"
-              className={`${getLinkClassName('/academia')} text-sm md:text-base`}
+              className={getLinkClassName('/academia')}
             >
               Cursos
             </Link>
@@ -28,7 +28,7 @@ const SubHeader = () => {
           <li>
             <Link 
               href="/academia/horarios"
-              className={`${getLinkClassName('/academia/horarios')} text-sm md:text-base`}
+              className={getLinkClassName('/academia/horarios')}
             >
               Horarios
             </Link>
@@ -36,7 +36,7 @@ const SubHeader = () => {
           <li>
             <Link
               href='/academia/profesores'
-              className={getLinkClassName('/academia/profesores')}
+              className={getLinkClassName('/academia/profesores')} 
             >
               Profesores
             </Link>
@@ -47,6 +47,14 @@ const SubHeader = () => {
               className={getLinkClassName('/academia/gala-ola')}
             >
               Gala Olá
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/academia/participaciones"
+              className={getLinkClassName('/academia/participaciones')}
+            >
+              Participaciones
             </Link>
           </li>
           <li>
