@@ -33,7 +33,6 @@ const CourseCard = ({
   const [showLargeImage, setShowLargeImage] = useState(false);
   const [showVideo, setShowVideo] = useState(true);
   const [selectedVideo, setSelectedVideo] = useState<number>(0);
-  const [isVideoReady, setIsVideoReady] = useState(false);
   
   const videos = Array.isArray(videoUrl) 
     ? videoUrl 
@@ -87,7 +86,6 @@ const CourseCard = ({
           setIsModalOpen(false);
           setShowLargeImage(false);
           setShowVideo(true);
-          setIsVideoReady(false);
         }}
         title={title}
       >
@@ -99,30 +97,11 @@ const CourseCard = ({
                 <video
                   src={videos[selectedVideo].url}
                   className="max-h-full max-w-full h-auto w-auto"
+                  autoPlay
                   controls
+                  muted={false}
                   playsInline
-                  muted={!isVideoReady}
-                  autoPlay={false}
-                  onCanPlay={() => setIsVideoReady(true)}
-                  poster={imageUrl}
                 />
-                {!isVideoReady && (
-                  <div className="absolute inset-0 flex items-center justify-center bg-black/50">
-                    <button 
-                      className="bg-white/20 hover:bg-white/30 text-white px-4 py-2 rounded-lg"
-                      onClick={(e) => {
-                        e.preventDefault();
-                        const video = e.currentTarget.parentElement?.previousElementSibling as HTMLVideoElement;
-                        if (video) {
-                          video.play();
-                          setIsVideoReady(true);
-                        }
-                      }}
-                    >
-                      Reproducir Video
-                    </button>
-                  </div>
-                )}
                 {videos[selectedVideo].teacher && (
                   <div className="absolute bottom-0 left-0 right-0 bg-black/70 p-2 text-white text-center">
                     <p className="font-semibold">{videos[selectedVideo].teacher}</p>
