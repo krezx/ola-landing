@@ -5,13 +5,19 @@ import Image from 'next/image';
 import Link from 'next/link';
 import Modal from '../Modal/Modal';
 
+interface VideoInfo {
+  url: string;
+  teacher: string;
+  schedule: string;
+}
+
 interface CourseCardProps {
   title: string;
   description: string;
   age?: string;
   imageUrl: string;
   galleryImages?: string[];
-  videoUrl?: string;
+  videoUrl?: string | VideoInfo[];
 }
 
 const CourseCard = ({ 
@@ -26,7 +32,14 @@ const CourseCard = ({
   const [selectedImage, setSelectedImage] = useState(imageUrl);
   const [showLargeImage, setShowLargeImage] = useState(false);
   const [showVideo, setShowVideo] = useState(true);
+  const [selectedVideo, setSelectedVideo] = useState<number>(0);
   
+  const videos = Array.isArray(videoUrl) 
+    ? videoUrl 
+    : videoUrl 
+      ? [{ url: videoUrl, teacher: '', schedule: '' }] 
+      : [];
+
   useEffect(() => {
     // Verificar si este curso debe abrirse automáticamente
     const selectedCourse = localStorage.getItem('selectedCourse');
@@ -79,16 +92,22 @@ const CourseCard = ({
         <div className="space-y-6">
           {/* Contenedor de Video/Imagen principal */}
           <div className="relative h-[400px] w-full">
-            {videoUrl && showVideo ? (
-              <div className="relative h-full w-full flex items-center justify-center bg-black">
+            {videos.length > 0 && showVideo ? (
+              <div className="relative h-full w-full flex flex-col items-center justify-center bg-black">
                 <video
-                  src={videoUrl}
+                  src={videos[selectedVideo].url}
                   className="max-h-full max-w-full h-auto w-auto"
                   autoPlay
                   controls
                   muted={false}
                   playsInline
                 />
+                {videos[selectedVideo].teacher && (
+                  <div className="absolute bottom-0 left-0 right-0 bg-black/70 p-2 text-white text-center">
+                    <p className="font-semibold">{videos[selectedVideo].teacher}</p>
+                    <p className="text-sm text-gray-300">{videos[selectedVideo].schedule}</p>
+                  </div>
+                )}
               </div>
             ) : (
               <div 
@@ -110,21 +129,28 @@ const CourseCard = ({
             )}
           </div>
 
-          {/* Miniaturas de la galería y control de video */}
+          {/* Miniaturas y controles de video */}
           <div className="flex gap-4 overflow-x-auto pb-2 justify-center">
-            {videoUrl && (
+            {videos.map((video, index) => (
               <div 
-                onClick={() => setShowVideo(true)}
+                key={index}
+                onClick={() => {
+                  setShowVideo(true);
+                  setSelectedVideo(index);
+                }}
                 className={`relative w-24 h-24 flex-shrink-0 rounded-lg overflow-hidden cursor-pointer 
-                  ${showVideo ? 'ring-2 ring-cyan-400' : 'opacity-70 hover:opacity-100'}`}
+                  ${showVideo && selectedVideo === index ? 'ring-2 ring-cyan-400' : 'opacity-70 hover:opacity-100'}`}
               >
-                <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
+                <div className="absolute inset-0 bg-black/50 flex flex-col items-center justify-center p-2">
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8 text-white">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347c-.75.412-1.667-.13-1.667-.986V5.653Z" />
                   </svg>
+                  {video.teacher && (
+                    <span className="text-white text-xs text-center mt-1">{video.teacher}</span>
+                  )}
                 </div>
               </div>
-            )}
+            ))}
             {allImages.map((img, index) => (
               <div 
                 key={index}

@@ -91,7 +91,18 @@ const courses = [
       "/images/courses/iniciacion/gallery-1.jpg",
       "/images/courses/iniciacion/gallery-2.jpg"
     ],
-    videoUrl: "/images/courses/iniciacion/video1.mp4",
+    videoUrl: [
+      {
+        url: "/images/courses/iniciacion/video1.mp4",
+        teacher: "Valeria Celume",
+        schedule: "Sábados"
+      },
+      {
+        url: "/images/courses/iniciacion/video2.mp4",
+        teacher: "Belen Esquivel",
+        schedule: "Viernes"
+      }
+    ]
   },
   {
     title: "TikTok Dance",
