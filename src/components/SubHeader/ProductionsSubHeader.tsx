@@ -27,10 +27,10 @@ const ProductionsSubHeader = () => {
           </li>
           <li>
             <Link 
-              href="/producciones/galeria"
-              className={getLinkClassName('/producciones/galeria')}
+              href="/producciones/staff"
+              className={getLinkClassName('/producciones/staff')}
             >
-              Galería
+              Staff
             </Link>
           </li>
           <li>

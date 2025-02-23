@@ -4,18 +4,31 @@ import ProductionsSubHeader from '@/components/SubHeader/ProductionsSubHeader';
 // Estos son datos de ejemplo. Deberías reemplazarlos con tus producciones reales
 const SAMPLE_PRODUCTIONS = [
   {
-    title: "Nombre de la Producción 1",
+    title: "OCR Club",
     description: "Una breve descripción de la producción, incluyendo detalles sobre el espectáculo, los artistas involucrados y el impacto que tuvo.",
-    imageUrl: "/images/placeholder-production-1.jpg", // Necesitarás agregar estas imágenes
-    date: "Diciembre 2023",
-    location: "Teatro Principal"
+    galleryImages: [
+      "/images/productions/casino-ovalle/main.jpg",
+      "/images/productions/casino-ovalle/1.jpg",
+      "/images/productions/casino-ovalle/2.jpg",
+      "/images/productions/casino-ovalle/3.jpg",
+      "/images/productions/casino-ovalle/4.jpg",
+      "/images/productions/casino-ovalle/5.jpg",
+    ],
+    date: "???",
+    location: "Ovalle Casino Resort"
   },
   {
-    title: "Nombre de la Producción 2",
+    title: "Campaña publicitaria",
     description: "Descripción de otra producción destacada, mencionando los elementos únicos y especiales de este espectáculo.",
-    imageUrl: "/images/placeholder-production-2.jpg",
-    date: "Octubre 2023",
-    location: "Auditorio Municipal"
+    galleryImages: [
+      "/images/productions/py/1.jpg",
+      "/images/productions/py/2.jpg",
+      "/images/productions/py/3.jpg",
+      "/images/productions/py/4.jpg",
+      "/images/productions/py/5.jpg",
+    ],
+    date: "Verano 2025",
+    location: "Avenida del Mar, La Serena"
   },
   // Puedes agregar más producciones aquí
 ];
@@ -25,22 +38,27 @@ export default function ProduccionesPage() {
     <main>
       <ProductionsSubHeader />
       <div className="max-w-7xl mx-auto px-4 py-12 mt-[200px]">
-        <h1 className="text-4xl font-bold text-white mb-8">Nuestras Producciones</h1>
-        <p className="text-gray-300 mb-12 max-w-3xl">
+        <h1 className="text-4xl font-bold text-white mb-8 text-center">Nuestras Producciones</h1>
+        <p className="text-gray-300 mb-12 max-w-3xl text-center mx-auto">
           Descubre las producciones que hemos realizado, desde espectáculos de danza 
           hasta eventos culturales que han dejado huella en nuestra comunidad.
         </p>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="space-y-16">
           {SAMPLE_PRODUCTIONS.map((production, index) => (
-            <ProductionCard
-              key={index}
-              title={production.title}
-              description={production.description}
-              imageUrl={production.imageUrl}
-              date={production.date}
-              location={production.location}
-            />
+            <div key={index}>
+              <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold mb-3 sm:mb-4 lg:mb-6">
+                {production.title}
+              </h2>
+              <p className="text-gray-300 mb-4">{production.description}</p>
+              <ProductionCard
+                title={production.title}
+                description={production.description}
+                date={production.date}
+                location={production.location}
+                galleryImages={production.galleryImages}
+              />
+            </div>
           ))}
         </div>
       </div>

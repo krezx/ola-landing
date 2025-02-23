@@ -2,126 +2,77 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
-import Modal from '../Modal/Modal';
 
 interface ProductionCardProps {
   title: string;
   description: string;
-  imageUrl: string;
+  galleryImages: string[];
   date: string;
   location?: string;
   additionalImages?: string[];
-  fullDescription?: string;
-  participants?: string[];
-  highlights?: string[];
 }
 
 const ProductionCard = ({ 
   title, 
   description, 
-  imageUrl, 
+  galleryImages,
   date, 
   location,
-  additionalImages = [],
-  fullDescription,
-  participants = [],
-  highlights = []
+  additionalImages = []
 }: ProductionCardProps) => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   return (
-    <>
-      <div 
-        className="bg-zinc-900 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow cursor-pointer"
-        onClick={() => setIsModalOpen(true)}
-      >
-        <div className="relative h-64 w-full">
-          <Image
-            src={imageUrl}
-            alt={title}
-            fill
-            className="object-cover"
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-          />
-        </div>
-        <div className="p-6">
-          <h3 className="text-xl font-bold text-white mb-2">{title}</h3>
-          <p className="text-gray-300 text-sm mb-4">{description}</p>
-          <div className="flex items-center justify-between text-sm text-gray-400">
-            <span>{date}</span>
-            {location && <span>{location}</span>}
-          </div>
+    <div className="overflow-hidden shadow-lg">
+      <div className="mt-5 w-full">
+        <div className="grid auto-rows-fr 
+                      grid-cols-[repeat(auto-fill,minmax(100px,1fr))]
+                      lg:grid-cols-[repeat(auto-fill,minmax(150px,1fr))]
+                      max-w-screen-xl mx-auto">
+          {galleryImages.map((image, index) => (
+            <div 
+              key={index} 
+              className="relative aspect-square cursor-pointer transition-transform hover:scale-105 
+                        max-w-[100px] lg:max-w-[150px] w-full mx-auto"
+              onClick={() => setSelectedImage(image)}
+            >
+              <Image
+                src={image}
+                alt={`${title} - Imagen ${index + 1}`}
+                fill
+                className="object-cover"
+              />
+            </div>
+          ))}
         </div>
       </div>
-
-      <Modal
-        isOpen={isModalOpen}
-        onClose={() => setIsModalOpen(false)}
-        title={title}
-      >
-        <div className="space-y-6">
-          <div className="relative h-[400px] w-full">
+      
+      {selectedImage && (
+        <div 
+          className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4"
+          onClick={() => setSelectedImage(null)}
+        >
+          <div className="relative w-[95vw] h-[90vh]">
             <Image
-              src={imageUrl}
+              src={selectedImage}
               alt={title}
               fill
-              className="object-cover rounded-lg"
+              className="object-contain"
+              sizes="95vw"
+              priority
             />
           </div>
-
-          {additionalImages && additionalImages.length > 0 && (
-            <div className="grid grid-cols-3 gap-4 mt-4">
-              {additionalImages.map((img, index) => (
-                <div key={index} className="relative h-32">
-                  <Image
-                    src={img}
-                    alt={`${title} - imagen ${index + 1}`}
-                    fill
-                    className="object-cover rounded-lg"
-                  />
-                </div>
-              ))}
-            </div>
-          )}
-
-          <div className="space-y-4">
-            {fullDescription && (
-              <div>
-                <h3 className="text-lg font-semibold mb-2">Sobre la producción</h3>
-                <p className="text-gray-300">{fullDescription}</p>
-              </div>
-            )}
-
-            <div className="flex justify-between text-gray-400">
-              <span>{date}</span>
-              {location && <span>{location}</span>}
-            </div>
-
-            {participants.length > 0 && (
-              <div>
-                <h3 className="text-lg font-semibold mb-2">Participantes</h3>
-                <ul className="list-disc list-inside text-gray-300">
-                  {participants.map((participant, index) => (
-                    <li key={index}>{participant}</li>
-                  ))}
-                </ul>
-              </div>
-            )}
-
-            {highlights.length > 0 && (
-              <div>
-                <h3 className="text-lg font-semibold mb-2">Momentos destacados</h3>
-                <ul className="list-disc list-inside text-gray-300">
-                  {highlights.map((highlight, index) => (
-                    <li key={index}>{highlight}</li>
-                  ))}
-                </ul>
-              </div>
-            )}
-          </div>
+          <a 
+            href={selectedImage}
+            download
+            className="absolute bottom-2 right-2 md:bottom-4 md:right-4 bg-white text-black px-3 py-1 md:px-4 md:py-2 text-sm md:text-base rounded-lg shadow-lg hover:bg-gray-100 transition-colors z-10"
+            onClick={(e) => e.stopPropagation()}
+          >
+            Descargar
+          </a>
         </div>
-      </Modal>
-    </>
+      )}
+    </div>
   );
 };
 
