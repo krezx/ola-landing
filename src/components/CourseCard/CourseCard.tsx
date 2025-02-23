@@ -18,6 +18,7 @@ interface CourseCardProps {
   imageUrl: string;
   galleryImages?: string[];
   videoUrl?: string | VideoInfo[];
+  imagePosition?: string;
 }
 
 const CourseCard = ({ 
@@ -26,7 +27,8 @@ const CourseCard = ({
   age,
   imageUrl,
   galleryImages = [],
-  videoUrl
+  videoUrl,
+  imagePosition = 'center'
 }: CourseCardProps) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState(imageUrl);
@@ -63,6 +65,7 @@ const CourseCard = ({
             src={imageUrl}
             alt={title}
             fill
+            style={{ objectPosition: imagePosition }}
             className="object-cover"
           />
         </div>

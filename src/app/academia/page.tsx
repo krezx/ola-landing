@@ -61,12 +61,13 @@ const courses = [
   },
   {
     title: "Girly",
-    description: "Curso enfocado a potenciar tu femineidad, actitud e interpretación, a través de distintos ritmos musicales.",
-    age: "+14 años",
+    description: "Curso enfocado a potenciar tu femineidad, actitud e interpretación, a través de distintos ritmos musicales.",
+    age: "+14 años",
     imageUrl: "/images/courses/girly/main.jpg",
     galleryImages: [
     ],
     videoUrl: "/images/courses/girly/video.mp4",
+    imagePosition: 'center',
   },
   {
     title: "Ballroom",
@@ -109,6 +110,7 @@ const courses = [
     galleryImages: [
     ],
     videoUrl: "/images/courses/tiktok/video.mp4",
+    imagePosition: 'bottom',
   },
   {
     title: "Dance Kids",
@@ -138,6 +140,7 @@ const courses = [
       "/images/courses/chair/gallery-6.jpg",
     ],
     videoUrl: "/images/courses/chair/video.mp4",
+    imagePosition: 'top',
   },
   {
     title: "Broadway Show",
@@ -148,6 +151,7 @@ const courses = [
       "/images/courses/broadway/gallery-1.jpg",
     ],
     videoUrl: "/images/courses/broadway/video.mp4",
+    imagePosition: '50% 35%',
   },
   {
     title: "Ballet",
@@ -173,7 +177,8 @@ const courses = [
     age: "+12 años",
     imageUrl: "/images/courses/lyrical/main.jpg",
     galleryImages: [
-    ]
+    ],
+    imagePosition: 'top',
   }
 ];
 
@@ -192,6 +197,7 @@ export default function AcademiaPage() {
               imageUrl={course.imageUrl}
               galleryImages={course.galleryImages}
               videoUrl={course.videoUrl}
+              imagePosition={course.imagePosition}
             />
           ))}
         </div>
