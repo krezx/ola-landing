@@ -87,10 +87,7 @@ const CourseCard = ({
             {allImages.map((img, index) => (
               <div 
                 key={index}
-                onClick={() => {
-                  setSelectedImage(img);
-                  setShowLargeImage(true);
-                }}
+                onClick={() => setSelectedImage(img)}
                 className={`relative w-24 h-24 flex-shrink-0 rounded-lg overflow-hidden cursor-pointer 
                   ${selectedImage === img ? 'ring-2 ring-cyan-400' : 'opacity-70 hover:opacity-100'}`}
               >

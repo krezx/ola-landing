@@ -78,7 +78,6 @@ const courses = [
     description: "Curso perfecto para comenzar en el mundo de la danza.",
     imageUrl: "/images/courses/iniciacion/main.jpg",
     galleryImages: [
-      "/images/courses/iniciacion/gallery-1.jpg",
       "/images/courses/iniciacion/gallery-2.jpg",
       "/images/courses/iniciacion/gallery-3.jpg"
     ]
