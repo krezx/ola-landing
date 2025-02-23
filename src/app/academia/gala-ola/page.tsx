@@ -56,22 +56,26 @@ const galas: Gala[] = [
 
 export default function GalaOlaPage() {
     return (
-        <main className="min-h-screen">
+        <main className="min-h-screen bg-black">
             <AcademySubHeader />
-            <div className="container mx-auto px-4 py-8 mt-[200px]">
-                <h1 className="text-4xl font-bold text-center mb-12">Gala Olá Dance</h1>
+            <div className="container mx-auto px-4 py-8 sm:mt-[144px] lg:mt-[200px] mt-[170px]">
+                <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-center mb-6 sm:mb-8 lg:mb-12">
+                    Gala Olá Dance
+                </h1>
                 
-                <div className="max-w-4xl mx-auto">
-                    <p className="text-lg text-center mb-16">
+                <div className="max-w-7xl mx-auto">
+                    <p className="text-sm sm:text-base lg:text-lg text-center text-gray-300 mb-8 sm:mb-12 lg:mb-16">
                         Cada año, Olá Dance celebra el talento y dedicación de sus alumnos 
                         con una gala especial donde demuestran todo lo aprendido durante el año.
                     </p>
 
-                    <div className="grid gap-8">
+                    <div className="space-y-8 sm:space-y-12 lg:space-y-16">
                         {galas.map((gala) => (
-                            <div key={gala.id} className="mb-20">
-                                <h2 className="text-3xl font-bold mb-4">{gala.titulo}</h2>
-                                <GalaCard key={gala.id} gala={gala} />
+                            <div key={gala.id}>
+                                <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold mb-3 sm:mb-4 lg:mb-6">
+                                    {gala.titulo}
+                                </h2>
+                                <GalaCard gala={gala} />
                             </div>
                         ))}
                     </div>
