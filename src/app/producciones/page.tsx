@@ -4,8 +4,8 @@ import ProductionsSubHeader from '@/components/SubHeader/ProductionsSubHeader';
 // Estos son datos de ejemplo. Deberías reemplazarlos con tus producciones reales
 const SAMPLE_PRODUCTIONS = [
   {
-    title: "OCR Club",
-    description: "Una breve descripción de la producción, incluyendo detalles sobre el espectáculo, los artistas involucrados y el impacto que tuvo.",
+    title: "Show Artístico",
+    description: "Show artístico para Ovalle Casino Resort.",
     galleryImages: [
       "/images/productions/casino-ovalle/main.jpg",
       "/images/productions/casino-ovalle/1.jpg",
@@ -30,14 +30,26 @@ const SAMPLE_PRODUCTIONS = [
     date: "Verano 2025",
     location: "Avenida del Mar, La Serena"
   },
-  // Puedes agregar más producciones aquí
+  {
+    title: "Evento Navideño",
+    description: "Show artístico de Navidad para la Municipalidad de La Serena.",
+    galleryImages: [
+      "/images/productions/navidad-municipalidad/main.jpg",
+      "/images/productions/navidad-municipalidad/1.jpg",
+      "/images/productions/navidad-municipalidad/2.jpg",
+      "/images/productions/navidad-municipalidad/3.jpg",
+      "/images/productions/navidad-municipalidad/4.jpg",
+    ],
+    date: "Diciembre 2023",
+    location: "Municipalidad de La Serena"
+  }
 ];
 
 export default function ProduccionesPage() {
   return (
     <main>
       <ProductionsSubHeader />
-      <div className="max-w-7xl mx-auto px-4 py-12 mt-[200px]">
+      <div className="max-w-7xl mx-auto px-4 py-12 mt-[150px]">
         <h1 className="text-4xl font-bold text-white mb-8 text-center">Nuestras Producciones</h1>
         <p className="text-gray-300 mb-12 max-w-3xl text-center mx-auto">
           Descubre las producciones que hemos realizado, desde espectáculos de danza 

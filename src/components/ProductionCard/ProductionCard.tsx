@@ -25,7 +25,7 @@ const ProductionCard = ({
   return (
     <div className="overflow-hidden shadow-lg">
       <div className="mt-5 w-full">
-        <div className="grid auto-rows-fr 
+        <div className="grid auto-rows-fr gap-4
                       grid-cols-[repeat(auto-fill,minmax(100px,1fr))]
                       lg:grid-cols-[repeat(auto-fill,minmax(150px,1fr))]
                       max-w-screen-xl mx-auto">

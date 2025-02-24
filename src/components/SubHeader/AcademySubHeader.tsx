@@ -51,10 +51,10 @@ const SubHeader = () => {
           </li>
           <li>
             <Link
-              href="/academia/participaciones"
-              className={getLinkClassName('/academia/participaciones')}
+              href="/academia/eventos"
+              className={getLinkClassName('/academia/eventos')}
             >
-              Participaciones
+              Eventos
             </Link>
           </li>
           <li>
