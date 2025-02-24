@@ -6,6 +6,7 @@ interface GalaProps {
     titulo: string;
     imagenUrl: string;
     galleryImages?: string[];
+    imagePosition?: string;
   };
 }
 
@@ -23,6 +24,7 @@ export const GalaCard: React.FC<GalaProps> = ({ gala }) => {
           alt={gala.titulo}
           fill
           className="object-cover hover:scale-105 transition-transform duration-300"
+          style={{ objectPosition: gala.imagePosition || 'center' }}
         />
       </div>
       

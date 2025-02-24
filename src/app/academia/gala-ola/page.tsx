@@ -9,6 +9,7 @@ interface Gala {
     titulo: string;
     imagenUrl: string;
     galleryImages?: string[];
+    imagePosition?: string;
 }
 
 const galas: Gala[] = [
@@ -30,7 +31,12 @@ const galas: Gala[] = [
         imagenUrl: "/images/galas/2023/main.jpg",
         galleryImages: [
             "/images/galas/2023/1.jpg",
-        ]
+            "/images/galas/2023/2.jpg",
+            "/images/galas/2023/3.jpg",
+            "/images/galas/2023/4.jpg",
+            "/images/galas/2023/5.jpg",
+        ],
+        imagePosition: '50% 85%'
     },
     {
         id: 3,
@@ -50,7 +56,8 @@ const galas: Gala[] = [
         galleryImages: [
             "/images/galas/2021/1.jpg",
             "/images/galas/2021/2.jpg",
-        ]
+        ],
+        imagePosition: '50% 60%'
     }
 ];
 
