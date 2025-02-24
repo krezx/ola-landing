@@ -72,7 +72,7 @@ export default function GalaOlaPage() {
                 
                 <div className="max-w-7xl mx-auto">
                     <p className="text-sm sm:text-base lg:text-lg text-center text-gray-300 mb-8 sm:mb-12 lg:mb-16">
-                        Cada año, Olá Dance celebra el talento y dedicación de sus alumnos 
+                        Cada año, la Academia Olá celebra el talento y dedicación de sus alumnos 
                         con una gala especial donde demuestran todo lo aprendido durante el año.
                     </p>
 

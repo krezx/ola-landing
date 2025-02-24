@@ -19,7 +19,7 @@ const SAMPLE_PRODUCTIONS = [
   },
   {
     title: "Campaña publicitaria",
-    description: "Descripción de otra producción destacada, mencionando los elementos únicos y especiales de este espectáculo.",
+    description: "Campaña publicitaria para inmobiliaria PY.",
     galleryImages: [
       "/images/productions/py/1.jpg",
       "/images/productions/py/2.jpg",
@@ -31,8 +31,8 @@ const SAMPLE_PRODUCTIONS = [
     location: "Avenida del Mar, La Serena"
   },
   {
-    title: "Evento Navideño",
-    description: "Show artístico de Navidad para la Municipalidad de La Serena.",
+    title: "Show Artístico",
+    description: "Show artístico navideño para la Municipalidad de La Serena.",
     galleryImages: [
       "/images/productions/navidad-municipalidad/main.jpg",
       "/images/productions/navidad-municipalidad/1.jpg",

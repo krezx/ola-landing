@@ -51,7 +51,7 @@ export default function ParticipacionesPage() {
         
         <div className="max-w-7xl mx-auto">
           <p className="text-sm sm:text-base lg:text-lg text-center text-gray-300 mb-8 sm:mb-12 lg:mb-16">
-            Conoce las participaciones y logros de nuestros alumnos en diferentes eventos y competencias.
+            Revisa las participaciones de nuestros alumnos en diferentes eventos.
           </p>
 
           <div className="space-y-8 sm:space-y-12 lg:space-y-16">
