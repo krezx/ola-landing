@@ -85,7 +85,7 @@ const Schedule = () => {
                 <h4 className="text-[#9DFFA7] text-xl">MODERNO/<br />CONTEMPO</h4>
               </div>
               <div>
-                <p className="text-white">17:30 HRS</p>
+                <p className="text-white">PRÓXIMAMENTE</p>
                 <p className="text-[#9DFFA7]">(+12 AÑOS)</p>
               </div>
             </div>
@@ -205,7 +205,7 @@ const Schedule = () => {
         <div>
           <h3 className="text-2xl font-bold underline text-white text-center mb-4">SÁBADO</h3>
           <div className="grid gap-4">
-            <div className="border-2 border-[#C0AFE2] p-4 rounded-lg schedule-card flex flex-col justify-between min-h-[165px]">
+            {/* <div className="border-2 border-[#C0AFE2] p-4 rounded-lg schedule-card flex flex-col justify-between min-h-[165px]">
               <div>
                 <h4 className="text-[#C0AFE2] text-xl">BALLET</h4>
                 <p className="text-[#C0AFE2]">JUVENIL/ADULTO</p>
@@ -213,7 +213,7 @@ const Schedule = () => {
               <div>
                 <p className="text-white">9:00 HRS</p>
               </div>
-            </div>
+            </div> */}
             <div className="border-2 border-[#FF99EB] p-4 rounded-lg schedule-card flex flex-col justify-between min-h-[165px]">
               <div>
                 <h4 className="text-[#FF99EB] text-xl">INICIACIÓN A LA DANZA</h4>
@@ -247,14 +247,14 @@ const Schedule = () => {
                 <p className="text-[#24FF00]">(+6 AÑOS)</p>
               </div>
             </div>
-            <div className="border-2 border-[#9DFFA7] p-4 rounded-lg schedule-card flex flex-col justify-between min-h-[165px]">
+            {/* <div className="border-2 border-[#9DFFA7] p-4 rounded-lg schedule-card flex flex-col justify-between min-h-[165px]">
               <div>
                 <h4 className="text-[#9DFFA7] text-xl">LYRICAL</h4>
               </div>
               <div>
                 <p className="text-white">13:00 HRS</p>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

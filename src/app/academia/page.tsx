@@ -1,3 +1,5 @@
+import React from 'react';
+import { NextPage } from 'next';
 import SubHeader from '@/components/SubHeader/AcademySubHeader';
 import CourseCard from '@/components/CourseCard/CourseCard';
 
@@ -153,14 +155,14 @@ const courses = [
     videoUrl: "/images/courses/broadway/video.mp4",
     imagePosition: '50% 35%',
   },
-  {
-    title: "Ballet",
-    description: "Técnica clásica fundamental para cualquier bailarín.",
-    age: "Alumnos +13 años",
-    imageUrl: "/images/courses/ballet/main.jpg",
-    galleryImages: [
-    ]
-  },
+  // {
+  //   title: "Ballet",
+  //   description: "Técnica clásica fundamental para cualquier bailarín.",
+  //   age: "Alumnos +13 años",
+  //   imageUrl: "/images/courses/ballet/main.jpg",
+  //   galleryImages: [
+  //   ]
+  // },
   {
     title: "Full Dance",
     description: "Curso enfocado en poder desarrollar la motricidad y coordinación de forma entretenida, además de poder jugar con la creatividad e imaginación.",
@@ -171,18 +173,18 @@ const courses = [
     ],
     videoUrl: "/images/courses/full-dance/video.mp4",
   },
-  {
-    title: "Lyrical",
-    description: "Fusión de ballet y jazz con énfasis en la expresión emocional.",
-    age: "+12 años",
-    imageUrl: "/images/courses/lyrical/main.jpg",
-    galleryImages: [
-    ],
-    imagePosition: 'top',
-  }
+  // {
+  //   title: "Lyrical",
+  //   description: "Fusión de ballet y jazz con énfasis en la expresión emocional.",
+  //   age: "+12 años",
+  //   imageUrl: "/images/courses/lyrical/main.jpg",
+  //   galleryImages: [
+  //   ],
+  //   imagePosition: 'top',
+  // }
 ];
 
-export default function AcademiaPage() {
+const AcademiaPage: NextPage = () => {
   return (
     <main className="min-h-screen bg-black text-white">
       <SubHeader />
@@ -203,5 +205,7 @@ export default function AcademiaPage() {
         </div>
       </div>
     </main>
-  );
-} 
+  ); 
+}
+
+export default AcademiaPage; 
